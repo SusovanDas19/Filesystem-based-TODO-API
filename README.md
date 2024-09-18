@@ -9,3 +9,13 @@ A simple Filesystem-based TODO API built with ***Express.js*** and ***Node.js***
 - **PUT**: Modify a task's details or update its status.
 - **GET**: Retrieve a list of all tasks.
 
+## File Structure 📁
+
+```plaintext
+Filesystem-based-TODO-API
+│
+├── index.js           # Contains the logic for the routes.
+├── package.json       # Defines the project's dependencies, scripts
+├── todos.json         # Stores the list of todos.
+├── package-lock.json  # Records the exact versions of dependencies installed.
+└── README.md          # Project documentation
