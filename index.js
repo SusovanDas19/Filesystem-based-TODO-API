@@ -28,7 +28,7 @@ app.post("/", async function (req, res) {        //adding new todo
     });
 });
 
-app.delete("/", async function (req, res) {      // Deleting a do 
+app.delete("/", async function (req, res) {      // Deleting a Todo 
     const id = req.body.id;
     let todos = readTods();
     const todoExists = todos.some(todo => todo.TodoNo == id);
@@ -49,12 +49,12 @@ app.delete("/", async function (req, res) {      // Deleting a do
 
 })
 
-app.put("/", async function (req, res) {         //edit the todo or update the status of the todo
+app.put("/", async function (req, res) {         //Edit the todo or update the status of the todo
     const id = req.body.id;
     const modifiedTask = req.body.modifiedTask;
     const updateDone = req.body.updateDone;
     let todos = readTods();
-    if (modifiedTask) {  //user want to modify the task
+    if (modifiedTask) { 
         for (let i = 0; i < todos.length; i++) {
             if (todos[i].TodoNo == id) {
                 todos[i].Task = modifiedTask;
@@ -65,7 +65,7 @@ app.put("/", async function (req, res) {         //edit the todo or update the s
             }
         }
     }
-    else if (updateDone) { //user want to update  the done status
+    else if (updateDone) {
         for (let i = 0; i < todos.length; i++) {
             if (todos[i].TodoNo == id) {
                 todos[i].Done = updateDone;
